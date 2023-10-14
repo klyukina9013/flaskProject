@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <span class="title"><h1>{% block title %}Частые вопросы и ответы{% endblock %}</h1></span>
+    <div style="text-align: center;">
+        <form method="POST">
+            <p>
+                <textarea id="content" name="content" placeholder="Вопрос" cols="30" rows="3"></textarea>
+            </p>
+            <p>
+                <textarea id="answer" name="answer" placeholder="Ответ" cols="30" rows="3"></textarea>
+            </p>
+            <p>
+                <input class="btn btn-primary" type="submit" value='Отправить'>
+            </p>
+        </form>
+    </div>
+{% endblock %}
